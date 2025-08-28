@@ -52,7 +52,7 @@ async function handleRequest(event) {
 
     return new Response(rdata, {
         status: 200, headers: {
-            "Content-Disposition": `${mode}; filename=${rname}`, // inline;
+            "Content-Disposition": `${mode}; filename="${rname}"`, // inline; filename is now quoted
             "Content-Length": rsize,
             "Content-Type": rtype,
             ...HEADERS_FILE
@@ -63,33 +63,30 @@ async function handleRequest(event) {
 // ---------- Retrieve File ---------- //
 
 async function RetrieveFile(channel_id, message_id) {
-    let  fID; let fName; let fType; let fSize; let fLen;
+    let  fID; let fName; let fType; let fSize;
     let data = await Bot.editMessage(channel_id, message_id, await UUID());
     if (data.error_code){return data}
     
     if (data.document){
-        fLen = data.document.length - 1
         fID = data.document.file_id;
         fName = data.document.file_name;
         fType = data.document.mime_type;
         fSize = data.document.file_size;
     } else if (data.audio) {
-        fLen = data.audio.length - 1
         fID = data.audio.file_id;
         fName = data.audio.file_name;
         fType = data.audio.mime_type;
         fSize = data.audio.file_size;
     } else if (data.video) {
-        fLen = data.video.length - 1
         fID = data.video.file_id;
         fName = data.video.file_name;
         fType = data.video.mime_type;
         fSize = data.video.file_size;
     } else if (data.photo) {
-        fLen = data.photo.length - 1
+        const fLen = data.photo.length - 1
         fID = data.photo[fLen].file_id;
         fName = data.photo[fLen].file_unique_id + '.jpg';
-        fType = "image/jpg";
+        fType = "image/jpeg";
         fSize = data.photo[fLen].file_size;
     } else {
         return ERROR_406
@@ -273,7 +270,8 @@ class Bot {
 
   static async fetchFile(file_path) {
       const file = await fetch(`https://api.telegram.org/file/bot${BOT_TOKEN}/${file_path}`);
-      return await file.arrayBuffer()
+      // This is the key change. Instead of buffering the whole file, we return the stream.
+      return file.body
   }
 
   static async apiUrl (methodName, params = null) {
@@ -291,7 +289,7 @@ class Bot {
 // ---------- Inline Listener ---------- // 
 
 async function onInline(event, inline) {
-  let  fID; let fName; let fType; let fSize; let fLen;
+  let  fID; let fName; let fType; let fSize;
 
   if (!PUBLIC_BOT && inline.from.id != BOT_OWNER) {
     const buttons = [[{ text: "Source Code", url: "https://github.com/vauth/filestream-cf" }]];
@@ -313,34 +311,31 @@ async function onInline(event, inline) {
   }
 
   if (data.document){
-    fLen = data.document.length - 1
     fID = data.document.file_id;
     fName = data.document.file_name;
     fType = data.document.mime_type;
     fSize = data.document.file_size;
   } else if (data.audio) {
-    fLen = data.audio.length - 1
     fID = data.audio.file_id;
     fName = data.audio.file_name;
     fType = data.audio.mime_type;
     fSize = data.audio.file_size;
   } else if (data.video) {
-    fLen = data.video.length - 1
     fID = data.video.file_id;
     fName = data.video.file_name;
     fType = data.video.mime_type;
     fSize = data.video.file_size;
   } else if (data.photo) {
-    fLen = data.photo.length - 1
+    const fLen = data.photo.length - 1
     fID = data.photo[fLen].file_id;
     fName = data.photo[fLen].file_unique_id + '.jpg';
-    fType = "image/jpg";
+    fType = "image/jpeg";
     fSize = data.photo[fLen].file_size;
   } else {
     return ERROR_406
   }
 
-  if (fType == "image/jpg") {
+  if (fType == "image/jpeg") {
     const buttons = [[{ text: "Send Again", switch_inline_query_current_chat: inline.query }]]
     return await Bot.answerInlinePhoto(inline.id, fName || "undefined", fID, buttons)
   } else {
@@ -413,11 +408,11 @@ async function onMessage(event, message) {
   } else if (message.photo) {
     fID = message.photo[message.photo.length - 1].file_id;
     fName = message.photo[message.photo.length - 1].file_unique_id + '.jpg';
-    fType = "image/jpg".split("/")[0];
+    fType = "image/jpeg".split("/")[0];
     fSave = await Bot.sendPhoto(BOT_CHANNEL, fID)
   } else {
     const buttons = [[{ text: "Source Code", url: "https://github.com/vauth/filestream-cf" }]];
-    return Bot.sendMessage(message.chat.id, message.message_id, "Send me any file/video/gif/audio *(t<=4GB, e<=20MB)*.", buttons)
+    return Bot.sendMessage(message.chat.id, message.message_id, "Send me any file/video/gif/audio.", buttons)
   }
 
   if (fSave.error_code) {return Bot.sendMessage(message.chat.id, message.message_id, fSave.description)}
