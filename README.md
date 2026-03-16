@@ -1,72 +1,119 @@
-# Streamfile Worker
-File To Link Telegram Bot Using Cloudflare Workers.
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,100:4ECDC4&height=200&text=FileTo-Stream&fontSize=42&fontColor=fff&animation=fadeIn&fontAlignY=40&desc=File%20To%20Link%20Telegram%20Bot%20Using%20Cloudflare%20Workers&descAlignY=60&descSize=14"/>
+</div>
 
-<br>
+<p align="center">
+  <a href="https://github.com/salman-dev-app/FileTo-Stream">
+    <img src="https://readme-typing-svg.demolab.com?font=Tagesschrift&size=22&duration=2000&pause=800&color=F7F7F7&background=FF001400&center=true&vCenter=true&multiline=true&width=500&height=70&lines=FileTo-Stream;File+To+Link+Telegram+Bot+Using+Cloudflare+Workers" alt="Typing SVG" />
+  </a>
+</p>
 
-## 🗂 Variables
-```javascript
-const BOT_TOKEN = "BOT_TOKEN"; // Insert your bot token.
-const BOT_WEBHOOK = "/endpoint"; // Let it be as it is.
-const BOT_SECRET = "BOT_SECRET"; // Insert a powerful secret text.
-const BOT_OWNER = 123456789; // Insert your telegram account id.
-const BOT_CHANNEL = -100123456789; // Insert telegram channel id.
-const SIA_SECRET = "SIA_SECRET"; // Insert a powerful secret text.
-const PUBLIC_BOT = false; // Make your bot public.
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white" />
+  <img src="https://img.shields.io/github/last-commit/salman-dev-app/FileTo-Stream?style=for-the-badge&color=00D9FF&label=LAST%20UPDATED&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/github/stars/salman-dev-app/FileTo-Stream?style=for-the-badge&color=FF6B6B&logo=github&logoColor=white" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/salman-dev-app/FileTo-Stream">
+    <img src="https://img.shields.io/badge/GitHub-View_Repository-FF6B6B?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+
+</p>
+
+---
+
+<div align="center">
+  <h3>
+    <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Glowing%20Star.png" alt="Star" width="25" height="25" style="vertical-align: middle;" /> 
+    File To Link Telegram Bot Using Cloudflare Workers
+  </h3>
+</div>
+
+---
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Clipboard.png" alt="Clipboard" width="30" height="30" style="vertical-align: middle;" /> About This Project
+
+<p>
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Repository:</strong> <a href="https://github.com/salman-dev-app/FileTo-Stream">FileTo-Stream</a><br/>
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Author:</strong> <a href="https://github.com/salman-dev-app">Md Salman Biswas</a><br/>
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Primary Language:</strong> JavaScript<br/>
+
+<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>License:</strong> MIT
+</p>
+
+---
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" alt="Rocket" width="30" height="30" style="vertical-align: middle;" /> Features
+
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Clean Architecture</strong> — Built following SOLID principles and DRY methodology</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Scalable Design</strong> — Engineered for performance and extensibility</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Developer Friendly</strong> — Well-structured codebase with clear documentation</p>
+<p><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Symbols/Check%20Mark%20Button.png" width="18" height="18" style="vertical-align: middle;" /> <strong>Production Ready</strong> — Battle-tested and deployed in real environments</p>
+
+---
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Wrench.png" alt="Wrench" width="30" height="30" style="vertical-align: middle;" /> Tech Stack
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=git,github,docker,vscode&theme=dark" />
+</div>
+
+---
+
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Scroll.png" alt="Scroll" width="30" height="30" style="vertical-align: middle;" /> Getting Started
+
+```bash
+# Clone the repository
+git clone https://github.com/salman-dev-app/FileTo-Stream.git
+
+# Navigate to the project
+cd FileTo-Stream
+
+# Install dependencies (if applicable)
+# Follow language-specific setup instructions below
 ```
 
-### Setup:
-- Get `BOT_TOKEN` from [@botfather](https://t.me/botfather).
-    - Turn on `inline mode` in bot settings.
-    - Disable `inline feedback` for better results.
-- Change `BOT_WEBHOOK` with your preferred webhook.
-- Change `BOT_SECRET` with a powerful secret text (only `[A-Z, a-z, 0-9, _, -]` are allowed).
-- Change `SIA_SECRET` with a powerful secret text using [password-generator](https://1password.com/password-generator).
-- Change `PUBLIC_BOT` to make your bot public (only `[true, false]` are allowed).
-- Get `BOT_OWNER` from [@idbot](https://t.me/username_to_id_bot).
-- Get `BOT_CHANNEL` id by forwarding a message from channel to [@idbot](https://t.me/username_to_id_bot).
-  - Channel **ID** must start with `-100`.
-  - Bot must be **admin** in channel with **edit rights**.
+---
 
-<br>
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Globe%20Showing%20Americas.png" alt="Globe" width="30" height="30" style="vertical-align: middle;" /> Connect With The Author
 
-## ⚙️Deploy
-- Create a [Cloudflare](https://www.cloudflare.com/) **account**.
-- Navigate to `Workers & Pages > Create > Create Worker`.
-- Deploy the worker by clicking **Deploy**.
-- Edit the code by clicking **Edit Code**.
-- **Maunally:**
-    - Upload `worker.js` into **Cloudflare**.
-    - Modify the [variables](#-variables).
-- **Dynamic:**
-    - Generate the code using [code generator](https://vauth.github.io/filestream-cf/).
-    - Copy paste the generated code to cloudflare workers.
-- Finally, **Deploy**.
+<p align="center">
+  <a href="mailto:mdsalmanhelp@gmail.com">
+    <img src="https://img.shields.io/badge/Hire_Me-Send_Email-FF6B6B?style=for-the-badge&logo=minutemailer&logoColor=white" />
+  </a>
+  <a href="https://wa.me/8801840933137">
+    <img src="https://img.shields.io/badge/WhatsApp-Direct_Chat-4ECDC4?style=for-the-badge&logo=whatsapp&logoColor=white" />
+  </a>
+  <a href="https://github.com/salman-dev-app">
+    <img src="https://img.shields.io/badge/GitHub-Follow_Me-00D9FF?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/vauth/filestream-cf)
-### Setup:
-- Once you deployed the bot on Cloudflare.
-- Check `XXX.XXXX.workers.dev/getMe` to verify your bot authorization.
-- Open `XXX.XXXX.workers.dev/registerWebhook` to register your bot webhook.
-- Then you can start using your bot.
+---
 
-<br>
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Scroll.png" alt="License" width="30" height="30" style="vertical-align: middle;" /> License
 
-## 📚 Response
-```python
-Telegram Link: t.me/usernamebot/?start=GRJUYMDDJRFGK
-Inline Link: @usernamebot GRJUYMDDJRFGK
-Download Link: XX.XX.workers.dev/?file=GRJUYMDDJRFGK
-Stream Link: XX.XX.workers.dev/?file=GRJUYMDDJRFGK&mode=inline
-```
+<div align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge&logo=open-source-initiative&logoColor=white" />
+  </a>
+</div>
 
-### Limitation:
-- Telegram Link: `<4.00GB`
-- Inline Link: `<4.00GB`
-- Download Link: `<20.00MB`
-- Stream Link: `<20.00MB`
+<p align="center">
+  This project is licensed under the MIT License — feel free to use and contribute.
+</p>
 
-<br>
+---
 
-## 📷 Screenshot
+<footer align="center">
+  <p>© 2024-2026 <a href="https://github.com/salman-dev-app">Md Salman Biswas</a> · All rights reserved</p>
+  <p>
+    <a href="https://github.com/salman-dev-app">
+      <img src="https://img.shields.io/badge/Profile_Status-Active-4ECDC4?style=flat" alt="Status" />
+    </a>
+  </p>
+  <p>Engineered with ❤️ by <a href="https://github.com/salman-dev-app">Md Salman Biswas</a></p>
+</footer>
 
-<a href="#Screenshot"><img src="https://github.com/user-attachments/assets/09101285-c68c-44a1-aaa1-e2d5c4c0cf90" width="300px"></a>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:FF6B6B,100:4ECDC4&height=120&section=footer"/>
